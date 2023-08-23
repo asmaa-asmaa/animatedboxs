@@ -1,0 +1,671 @@
+* {
+    
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.212);
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center; 
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.664);
+}
+p {
+    font-size: 22px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.356);
+}
+
+.container {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.container .box {
+    width:100px;
+    color:white;
+    padding:10px 20px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ccc;
+    box-shadow: 3px 5px 9px rgba(128, 128, 128, 0.322);
+    transition: .3s;
+    position: relative;
+}
+.container .one {
+    background-color: rgb(25, 0, 255);
+}
+.container .one:hover {
+    background-color: rgb(56, 68, 236);
+}
+.container .two {
+    background-color: rgb(121, 194, 236);
+}
+.container .two:hover {
+    box-shadow: -3px -5px 9px rgba(128, 128, 128, 0.322), 3px 5px 9px rgba(19, 11, 11, 0.322) inset,  3px 5px 9px rgba(243, 241, 241, 0.322);;
+    
+}
+.container .three {
+    background-color: rgb(41, 186, 223);
+}
+
+.container .three::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    border: 1px solid;
+    border-color:transparent;
+    transition: .5s; 
+}
+.container .three::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:0;
+    border: 1px solid;
+    border-color:transparent;
+    transition: .5s; 
+}
+
+
+.container .three:hover {
+    background-color: #ccc;
+    color: blue;
+    border-radius: 0;
+    box-shadow: none;   
+}
+.container .three:hover.three::before {
+    width:98%;
+    height: 97%;
+    border-color: blue blue  transparent  transparent;
+
+    
+}
+.container .three:hover.three::after {
+    width:98%;
+    height: 98%;
+    border-color: transparent  transparent blue blue;
+}
+.container .four {
+    background:linear-gradient(to right, rgb(220, 233, 228) , rgb(188, 219, 207),rgb(162, 219, 200) );
+}
+.container .four:hover {
+    background:linear-gradient(to right, rgb(56, 116, 93) , rgb(107, 148, 132),rgb(206, 226, 219) );
+
+}
+.container .five {
+    background-color: orangered;
+}
+.container .five:hover {
+    background-color: #ccc;
+    color:orangered;
+}
+.container .five::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:1px;
+    background-color: transparent;
+    transition: 1s;
+}
+.container .five::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:1px;
+    background-color: transparent;
+    transition: 1s;
+}
+.container .five:hover.five::before,
+.container .five:hover.five::after {
+    background-color: orangered;
+    width: 100%;
+}
+.container .six {
+    /* background:linear-gradient(to right, rgb(0, 238, 255) , rgb(236, 63, 179) 46%, rgb(0, 238, 255)); */
+    background:-webkit-radial-gradient(circle,  rgb(236, 63, 179) 0%, rgb(0, 238, 255) 100%);
+    
+}
+
+.container .six::before {
+    content: "";
+    position: absolute;
+    top:-2px;
+    left:0;
+    width:0;
+    height:2px;
+    background-color: rgba(0, 0, 0, 0.247);
+    filter: blur(2px);
+    transition: .3s;
+}
+
+.container .six::after {
+    content: "";
+    position: absolute;
+    bottom:-3px;
+    right:0;
+    width:0;
+    height:2px;
+    background-color:  rgba(0, 0, 0, 0.247);
+    filter: blur(2px);
+    transition: .3s;
+
+}
+.container .six:hover.six::before,
+.container .six:hover.six::after {
+    width:98%;
+       
+}
+.container .six span::before {
+    content: "";
+    position: absolute;
+    bottom:-3px;
+    left:0;
+    width:2px;
+    height:0;
+    background-color:  rgba(0, 0, 0, 0.247);
+    filter: blur(2px);
+    transition: .3s;
+}
+.container .six span::after {
+    content: "";
+    position: absolute;
+    top:-2px;
+    right:0;
+    width:2px;
+    height:0;
+    background-color:  rgba(0, 0, 0, 0.247);
+    filter: blur(2px);
+    transition: .3s;
+
+}
+.container .six:hover.six span::before,
+.container .six:hover.six span::after {
+    height:98%;
+       
+}
+
+.container .six:hover {
+    background:none;
+    box-shadow: none;   
+}
+.container .seven {
+    background: linear-gradient(to bottom,rgb(209, 68, 2),orange);
+    
+}
+.container .seven::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 95%;
+    height: 95%;
+    border: 2px solid;
+    border-color:transparent;
+}
+.container .seven:hover::before {
+    border-color: #00000047 transparent transparent #00000047;
+    filter: blur(2px);
+
+}
+
+.container .seven span::before {
+   content: "";
+   position: absolute;
+   top:0;
+   left:0;
+   width:0;
+   height:0;
+   border:2px solid transparent;
+   transition: .5s;
+   
+}
+.container .seven:hover.seven span::before {
+    width:97%;
+    height:90%;
+    border-color: red transparent transparent red;
+}
+.container .seven span::after {
+   content: "";
+   position: absolute;
+   bottom:0;
+   right:0;
+   width:0;
+   height:0;
+   border:2px solid transparent;
+   transition: .5s;
+
+}
+.container .seven:hover.seven span::after {
+    width:97%;
+    height:90%;
+    border-color: transparent red red transparent;
+
+}
+.container .seven:hover {
+    background:none;
+    box-shadow: 4px 5px 9px #00000047;
+}
+
+.container .eight {
+    background: linear-gradient(132deg, rgb(216, 14, 216) ,rgb(243, 233, 243));
+
+}
+.container .eight:hover {
+    background:none;
+    color:rgb(216, 14, 216);
+}
+.container .eight::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border:2px solid transparent;
+    transition: .5s;
+    
+ }
+ .container .eight:hover.eight::before {
+     width:97%;
+     height:90%;
+     border-color: rgb(216, 14, 216) transparent transparent  rgb(216, 14, 216);
+ }
+ .container .eight::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:0;
+    height:0;
+    border:2px solid transparent;
+    transition: .5s;
+ }
+ .container .eight:hover.eight::after {
+     width:97%;
+     height:90%;
+     border-color: transparent rgb(216, 14, 216)rgb(216, 14, 216) transparent;
+ }
+ .container .nine {
+    background-color: white;
+    overflow: hidden;
+    
+ }
+ .container .nine span {
+    position: relative;
+    z-index: 10000;
+ }
+ 
+ .container .nine::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition: .3s;
+    background:linear-gradient(128deg, rgb(163, 5, 163),rgb(132, 225, 248));
+
+ }
+ 
+ .container .nine:hover.nine::after {
+    transform:scale(3) rotate(180deg);
+ }
+ .container .ten {
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+ }
+ .container .ten span {
+    position: relative;
+    z-index: 100;
+ }
+ .container .ten::before {
+    content: "";
+    position: absolute;
+    top:-1px;
+    left:-1px;
+    width:100%;
+    height: 100%;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 6px;
+    
+    
+ }
+ .container .ten:hover.ten::before {
+    animation: flash .2s;
+    
+ }
+
+@keyframes flash {
+   
+    0%, 50% {
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:0;
+        height: 0;
+    }
+    100% {
+        
+        width:100%;
+        height: 100%;
+
+    }
+}
+/* @keyframes flash {
+   
+    0%, 50% {
+        scale: 0;
+    }
+    100% {
+        
+        scale:1;
+    }
+} */
+.container .eleven {
+    background-color: rgb(233, 123, 123);
+    overflow: hidden;
+
+}
+.container .eleven:hover {
+    background-color: rgb(245, 145, 161);
+}
+.container .eleven::before {
+    content: "";
+    position: absolute;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    opacity: .5;
+    animation: shine 3s ease-in-out infinite;
+
+}
+
+@keyframes shine {
+    90% {
+        transform: rotate(45deg) scale(4) ;
+    }
+    93% {
+        transform: rotate(45deg) scale(8) ;
+        opacity: 1;
+    }
+    95% {
+        transform: rotate(45deg) scale(10) ;
+    }
+    100% {
+        transform: rotate(45deg) scale(50) ;       
+    }
+
+}
+.container .twelve {
+    height:20;
+    top:-6px;
+  }
+  .container .twelve span {
+    background: rgb(0,172,238);
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px 4px;
+    box-shadow: 3px 5px 9px rgba(128, 128, 128, 0.322);
+    transition:.5s;
+  }
+  .container .twelve span:nth-child(2) {
+    -webkit-transform-origin: 0% 0% 40px;
+    -moz-transform-origin:0% 0% 40px;
+    transform-origin: 0% 0% 40px;
+
+  }
+  .container .twelve:hover span:nth-child(2) {
+    transform:rotateX(90deg);
+    box-shadow: 3px 5px 9px rgba(128, 128, 128, 0.322), 0px 8px 6px rgba(128, 128, 128, 0.644) inset;
+
+  }
+
+  .container .twelve span:nth-child(1) {
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 0% 0% 0px;
+    -moz-transform-origin:0% 0% 0px;  
+    transform-origin: 0% 0% 0px;
+
+  }
+  .twelve:hover span:nth-child(1) {
+    transform: rotateX(0);
+    box-shadow: 3px 5px 9px rgba(128, 128, 128, 0.322), 0px -6px 6px rgba(128, 128, 128, 0.644) inset;
+
+  }
+/* .container .twelve span:nth-child(1) {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px; 
+  }
+  .twelve:hover span:nth-child(1) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  .container .twelve span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+   
+  }
+  .container .twelve:hover span:nth-child(2) {
+      color: transparent;
+     -webkit-transform: rotateX(-90deg);
+     -moz-transform: rotateX(-90deg);
+     transform: rotateX(-90deg);
+  }  
+    */
+    .container .thirteen {
+        background: -webkit-linear-gradient(340deg,rgb(217, 233, 217), rgb(75, 165, 120));
+        background:-moz-linear-gradient(340deg,rgb(217, 233, 217), rgb(75, 165, 120));
+        background: linear-gradient(340deg,rgb(217, 233, 217), rgb(75, 165, 120));
+        transition: 0;
+    }
+    .container .thirteen:hover {
+        box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452),-3px -4px 6px white;
+
+    }
+
+    .container .thirteen span {
+        position: relative; 
+        z-index: 2;
+    }
+    .container .thirteen::before {
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: transparent;
+        width:100%;
+        height:0;
+        border-radius: 6px;
+        transition: .3s;
+        z-index: 1;
+    }
+   .container .thirteen:hover::before {
+    height: 100%;
+    background-color: rgb(170, 235, 210);
+   }
+
+ .container .thirteen::after {
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color: transparent;
+    width:100%;
+    height:0;
+    border-radius: 6px;
+    transition: .3s .2s;  
+   }
+   .container .thirteen:hover::after {
+    height: 94%;
+    background-color: rgb(170, 235, 210);
+    box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452),-3px -4px 6px white;
+   }
+   .container .fourteen {
+    background-color: greenyellow;
+
+   }
+   
+   .container .fourteen span {
+    position: relative; 
+    z-index: 3;
+   }
+   .container .fourteen::before {
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color:transparent;
+    width:100%;
+    height:0%;
+    border-radius: 6px;
+    transition: .3s; 
+    z-index: 1;  
+   }
+  .container .fourteen:hover::before {
+   height: 100%;
+   background-color: orangered;
+
+  }
+  .container .fourteen::after {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:orangered;
+    width:100%;
+    height:0%;
+    border-radius: 6px;
+    transition: .3s .2s;
+     
+   }
+  .container .fourteen:hover::after {
+   height: 100%;
+  }
+  .container .fifteen {
+    background-color: purple;
+  }
+  .container .fifteen span {
+    position: relative;
+    z-index: 3;
+  }
+  .container .fifteen::before {
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452);
+    border-radius: 6px;
+    transition: .3s;
+    z-index: 1;
+  }
+  .container .fifteen:hover::before {
+    width:100%;
+    background-color: blue;
+  } 
+  .container .fifteen::after {
+    content: "";
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    height: 100%;
+    background-color: blue;
+    box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452);
+    border-radius: 6px;
+    transition: .3s .2s;
+    
+  }
+  .container .fifteen:hover::after {
+    width:100%;
+  } 
+
+.container .sixteen {
+    box-shadow:3px 5px 9px rgba(128, 128, 128, 0.322),-1px -0px 6px white;
+}
+.container .sixteen span {
+    position: relative;
+    z-index: 3;
+    
+}
+
+.container .sixteen::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    width:0;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 3px 5px 0px #ccc inset;
+    transition: .3s;
+}
+.container .sixteen:hover::before {
+    width:100%;
+    box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452),-3px -4px 6px white;
+}
+.container .sixteen::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    border-radius: 6px;
+    box-shadow: 5px 3px 5px rgba(128, 128, 128, 0.452),-3px -4px 6px white;
+    height: 100%; 
+    transition: .3s;   
+}
+.container .sixteen:hover::after {
+    width:100%;
+    box-shadow: 3px 5px 0px #ccc inset;
+   
+}
+
+
+
+  
+    
+
+
+  
+
+
+
+  
+ 
